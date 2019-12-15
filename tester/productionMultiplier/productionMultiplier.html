@@ -1,0 +1,14 @@
+<div class="productionMultiplierContainer" data-ng-show="itemValue.production != undefined">
+    <div class="multiplierItem button" data-ng-click="itemValue.production.perInterval = itemValue.production.perInterval + 1">+1</div>
+    <div class="multiplierItem">INT: {{itemValue.production.perInterval}}</div>
+
+    <div class="multiplierItem button" data-ng-click="itemValue.production.accumulator = itemValue.production.accumulator - 1">-1</div>
+    <div class="multiplierItem">AC: {{itemValue.production.accumulator}}</div>
+
+    <div class="multiplierItem button" data-ng-click="itemValue.production.speed = itemValue.production.speed - 1">-1</div>
+    <div class="multiplierItem">SPD: {{itemValue.production.speed}}</div>
+
+    <div class="multiplierItem button" data-ng-click="itemValue.production.speed = itemValue.production.speed + 1">+1</div>
+    <div class="multiplierItem">xSP: {{itemValue.production.speed}}</div>
+
+</div>

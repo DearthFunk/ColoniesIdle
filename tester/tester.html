@@ -1,0 +1,27 @@
+<div class="testerContainer">
+
+    <div class="typeSection"  data-ng-repeat="group in values.itemGroups | orderObjectBy : 'order'">
+
+        <div class="typeSectionTitle">
+            <input type="checkbox" data-ng-model="group.active">
+            {{group.order}}-{{group.name}}
+        </div>
+
+        <div class="itemSection" data-ng-repeat="item in group.items | orderObjectBy: 'order'" data-ng-show="group.active && group.items">
+            <div class="itemSectionActivate"><input type="checkbox" data-ng-model="item.active"></div>
+            <div class="controls" data-ng-show="item.active">
+                <div class="itemSectionTitle"
+                     data-tooltip-animation="true"
+                     data-tooltip-html-unsafe="{{values.processCostForPopover(item)}}"
+                     data-tooltip-trigger="mouseenter"
+                     data-tooltip-placement="right">{{item.name}} :
+                     </div>
+                <div class="itemSectionValue">{{item.total}}</div>
+                <div class="valChangeControls" data-item-value="item"></div>
+                <div class="clickTimer" data-item-value="item" data-width="50" data-auto-start="false"></div>
+                <div class="productionMultiplier" data-item-value="item"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

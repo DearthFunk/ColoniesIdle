@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html data-ng-app="colonies" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <!---LIBRARIES----------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="lib/angular/angular.js"></script>
+
+    <!--MAIN----------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/mainController.js"></script>
+        <link rel="stylesheet/less" type="text/css" href="css/lessDefinitions.less">
+        <link rel="stylesheet/less" type="text/css" href="css/main.less">
+
+    <!--DATA FILES----------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/data/functions.js"></script>
+        <script type="text/javascript" src="js/data/wishingWells.js"></script>
+        <script type="text/javascript" src="js/data/mainObject.js"></script>
+        <script type="text/javascript" src="js/data/keyCodes.js"></script>
+        <script type="text/javascript" src="js/data/messages.js"></script>
+
+
+    <!--FILTERS / SERVICES--------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="services/valService.js"></script>
+        <script type="text/javascript" src="filters/orderObjectBy.js"></script>
+        <script type="text/javascript" src="filters/conditional.js"></script>
+
+    <!--TESTER--------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="tester/tester.js"></script>
+        <link rel="stylesheet/less" type="text/css" href="tester/tester.less">
+
+    <!--PAGES---------------------------------------------------------------------------------------------------------->
+    <script type="text/javascript" src="pages/pages.js"></script>
+        <script type="text/javascript" src="pages/animals/animals.js"></script>
+        <script type="text/javascript" src="pages/developments/developments.js"></script>
+        <script type="text/javascript" src="pages/locations/locations.js"></script>
+        <script type="text/javascript" src="pages/map/map.js"></script>
+        <script type="text/javascript" src="pages/metals/metals.js"></script>
+        <script type="text/javascript" src="pages/resources/resources.js"></script>
+        <script type="text/javascript" src="pages/wishingWell/wishingWell.js"></script>
+        <link rel="stylesheet/less" type="text/css" href="pages/animals/animals.less">
+        <link rel="stylesheet/less" type="text/css" href="pages/developments/developments.less">
+        <link rel="stylesheet/less" type="text/css" href="pages/locations/locations.less">
+        <link rel="stylesheet/less" type="text/css" href="pages/map/map.less">
+        <link rel="stylesheet/less" type="text/css" href="pages/metals/metals.less">
+        <link rel="stylesheet/less" type="text/css" href="pages/resources/resources.less">
+        <link rel="stylesheet/less" type="text/css" href="pages/wishingWell/wishingWell.less">
+
+    <!--DIRECTIVES----------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="tester/valChangeControls/valChangeControls.js"></script>
+        <script type="text/javascript" src="directives/clickTimer/clickTimer.js"></script>
+        <script type="text/javascript" src="tester/productionMultiplier/productionMultiplier.js"></script>
+        <script type="text/javascript" src="directives/menu/menu.js"></script>
+        <script type="text/javascript" src="directives/notifications/notifications.js"></script>
+        <script type="text/javascript" src="directives/purchaseButton/purchaseButton.js"></script>
+        <script type="text/javascript" src="directives/table/table.js"></script>
+        <link rel="stylesheet/less" type="text/css" href="tester/valChangeControls/valChangeControls.less">
+        <link rel="stylesheet/less" type="text/css" href="directives/clickTimer/clickTimer.less">
+        <link rel="stylesheet/less" type="text/css" href="tester/productionMultiplier/productionMultiplier.less">
+        <link rel="stylesheet/less" type="text/css" href="directives/menu/menu.less">
+        <link rel="stylesheet/less" type="text/css" href="directives/notifications/notifications.less">
+        <link rel="stylesheet/less" type="text/css" href="directives/purchaseButton/purchaseButton.less">
+        <link rel="stylesheet/less" type="text/css" href="directives/table/table.less">
+
+    <!--LESS COMPILER-------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="lib/less/less-1.5.0.min.js"></script>
+
+
+</head>
+
+<body data-ng-controller="myController">
+    <div class="testerButton" data-ng-click="showTester = !showTester">TESTER</div>
+    <div class="tester" data-ng-show="showTester"></div>
+
+<div class="container">
+    <div class="panel notifications" data-ng-show="!showTester"></div>
+    <div class="menu"          data-ng-show="!showTester" data-items="values.itemGroups" data-show-popover="true"></div>
+    <div class="panel page" data-ng-show="!showTester && values.itemGroups.resources.active">
+        <div class="processingPlants"   data-item-value="values.itemGroups.processingPlants"></div>
+        <div class="developments"       data-item-value="values.itemGroups.developments"></div>
+        <div class="wishingWell"        data-item-value="values.itemGroups.wishingWell"></div>
+        <div class="resources"          data-item-value="values.itemGroups.resources"></div>
+        <div class="locations"          data-item-value="values.itemGroups.locations"></div>
+        <div class="animals"            data-item-value="values.itemGroups.animals"></div>
+        <div class="metals"             data-item-value="values.itemGroups.metals"></div>
+        <div class="map"                data-item-value="values.itemGroups.map"></div>
+    </div>
+</div>
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-53802820-1', 'auto');
+ga('send', 'pageview');
+</script>	
+
+</body>
+</html>

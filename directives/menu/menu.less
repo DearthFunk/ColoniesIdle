@@ -1,0 +1,23 @@
+@import "../../css/lessDefinitions.less";
+
+div.menuContainer {
+    width: 208px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+div.menuContainer > div.menuItem {
+    border: @mainBorder;
+    padding: 5px 15px 5px 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+div.menuContainer > div.menuItem:hover {
+    background-color: @menuHover;
+    box-shadow: 0px 0px 1px 1px @menuHoverBorder;
+}
+
+div.menuContainer > div.selectedMenuItem-true {
+    background-color: @menuSelect;
+}

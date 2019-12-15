@@ -1,0 +1,12 @@
+<div class="wishingWellContainer" data-ng-show="itemValue.selected">
+
+    <div class="section leftSide">
+        <div class="menu" data-items="itemValue.items" data-show-popover="false"></div>
+    </div>
+
+    <div class="section rightSide" data-ng-repeat="item in itemValue.items track by $index" data-ng-show="item.selected">
+       <div class="wellTitle">{{item.name}}</div>
+       <pre class="asciiART"><span data-ng-repeat="row in item.text track by $index">{{row}}<br></span></pre>
+    </div>
+
+</div>

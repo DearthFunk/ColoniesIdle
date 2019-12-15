@@ -1,0 +1,25 @@
+<div class="resourcesContainer" data-ng-show="itemValue.selected">
+<!--
+    <table>
+        <tr>
+            <td class="header borderRight">NAME</td>
+            <td class="header borderRight">TOTAL</td>
+            <td class="header borderRight">HARVESTER</td>
+            <td class="header borderRight">AMOUNT</td>
+            <td class="header borderRight">ACCUMULATE</td>
+            <td class="header">SPEED</td>
+
+        </tr>
+        <tr data-ng-repeat="item in itemValue.items | orderObjectBy: 'order'" data-ng-show="item.active">
+            <td class="entry borderRight">{{item.name}}: </td>
+            <td class="entry borderRight">{{item.total}}</td>
+            <td class="entry borderRight"><div class="clickTimer" data-item-value="item" data-width="90" data-auto-start="true"></div></td>
+            <td class="entry borderRight">{{item.production.perInterval}}</td>
+            <td class="entry borderRight">{{item.production.accumulator}}</td>
+            <td class="entry">{{item.production.speed}}</td>
+        </tr>
+    </table>
+-->
+    <div class="table" data-item-value="itemValue"></div>
+
+</div>

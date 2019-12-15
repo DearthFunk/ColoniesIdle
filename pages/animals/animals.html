@@ -1,0 +1,22 @@
+<div class="animalsContainer" data-ng-show="itemValue.selected">
+
+    <table>
+        <tr>
+            <td class="header nameHeader">NAME</td>
+            <td class="header timerHeader">MEAT-ATIZE</td>
+            <td class="header intervalHeader">AMOUNT</td>
+            <td class="header accumulatorHeader">ACCUMULATE</td>
+            <td class="header speedHeader">SPEED</td>
+            <td class="header totalHeader">TOTAL</td>
+        </tr>
+        <tr data-ng-repeat="item in itemValue.items | orderObjectBy: 'order'" data-ng-show="item.active">
+            <td class="entry nameColumn">{{item.name}}: </td>
+            <td class="entry timerColumn"><div class="clickTimer" data-item-value="item" data-width="90" data-auto-start="true"></div></td>
+            <td class="entry intervalColumn">{{item.production.perInterval}}</td>
+            <td class="entry accumulatorColumn">{{item.production.accumulator}}</td>
+            <td class="entry speedColumn">{{item.production.speed}}</td>
+            <td class="entry totalColumn">{{item.total}}</td>
+        </tr>
+    </table>
+
+</div>

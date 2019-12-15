@@ -1,0 +1,5 @@
+<div class="clickTimerContainer" data-ng-style="{width: width + 'px'}" data-ng-click="startTimer()" data-ng-show="itemValue.production != undefined">
+    <span class="innerText">{{itemValue.accumulated}}</span>
+    <div class="inner autoClick"  data-ng-style="{right: width - (width/itemValue.production.accumulator * autoClickCount) + 'px'}"></div>
+    <div class="inner background" data-ng-style="{right: backgroundPos +'px'}"></div>
+</div>

@@ -1,0 +1,15 @@
+<div class="menuContainer">
+    <div class="menuItem selectedMenuItem-{{group.selected}}"
+         data-ng-repeat="group in items | orderObjectBy:'order'"
+         data-ng-show="group.active && showPopover"
+         data-ng-click="selectMenuItem(group)"
+         data-tooltip-animation="true"
+         data-tooltip-html-unsafe="{{values.processItemForPopover(group)}}"
+         data-tooltip-trigger="mouseenter"
+         data-tooltip-placement="right">{{group.name}}</div>
+    <div class="menuItem selectedMenuItem-{{group.selected}}"
+         data-ng-repeat="group in items | orderObjectBy:'order'"
+         data-ng-show="group.active && !showPopover"
+         data-ng-click="selectMenuItem(group)">{{group.name}}</div>
+
+</div>

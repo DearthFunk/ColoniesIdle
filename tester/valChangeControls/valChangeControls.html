@@ -1,0 +1,10 @@
+<div class="valChangeControlsContainer">
+
+    <div data-ng-show="itemValue.total != undefined" data-ng-click="changeValue(10)">+10</div>
+    <div data-ng-show="itemValue.total != undefined" data-ng-click="changeValue(-10)">-10</div>
+    <div data-ng-show="itemValue.total != undefined" data-ng-click="changeValue(10000)">+10K</div>
+    <div data-ng-show="itemValue.total != undefined" data-ng-click="changeValue(-10000)">-10K</div>
+    <div data-ng-show="itemValue.cost  != undefined">
+        <div class="purchaseButton" data-item-value="itemValue"></div>
+    </div>
+</div>

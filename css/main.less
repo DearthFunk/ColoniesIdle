@@ -1,0 +1,88 @@
+@import "../css/lessDefinitions.less";
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    font-family: monospace;
+    font-size: 12px;
+    color: @mainFontcolor;
+
+}
+div.container {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+    div.container > div.panel {
+        display: inline-block;
+        vertical-align: top;
+        padding: 20px;
+        height: 100%;
+        border: @mainBorder;
+        box-sizing: border-box;
+    }
+    div.container > div.panel.page {
+        width: 600ppx;
+    }
+
+
+
+
+
+
+div.testerButton {
+  display: inline-block;
+  width: 75px;
+  text-align: center;
+  height: 18px;
+  background: #0000FF;
+  position: absolute;
+  right: 0;
+  border: 3px solid #000000;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: bold;
+  top: 0;
+}
+
+/*--------------------------------------POP OVERS----------*/
+.activeLine {
+    color: #5cb85c;
+    font-weight: bold;
+    font-size: 16px;
+}
+.tooltip-inner {
+    max-width: 600px;
+}
+.tooltipContainer {
+    text-align: left;
+}
+.toolTipListLeft {
+    display: inline-block;
+    padding-left: 10px;
+    text-align: right;
+}
+.toolTipListRight {
+    text-align: left;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.asciiART {
+    background-color: #FFFFFF;
+    border: none;
+    line-height: 1;
+    font-size: 8px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}

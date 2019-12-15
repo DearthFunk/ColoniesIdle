@@ -1,0 +1,16 @@
+<div class="developmentsContainer" data-ng-show="itemValue.selected">
+
+    <table>
+        <tr>
+            <td class="header nameHeader">NAME</td>
+            <td class="header totalHeader">TOTAL</td>
+            <td class="header buildHeader">BUILD</td>
+        </tr>
+        <tr data-ng-repeat="item in itemValue.items | orderObjectBy: 'order'" data-ng-show="item.active">
+            <td class="entry nameColumn">{{item.name}}: </td>
+            <td class="entry totalColumn">{{item.total}}</td>
+            <td class="entry buildColumn"><div class="purchaseButton" data-item-value="item"></div></td>
+        </tr>
+    </table>
+
+</div>
